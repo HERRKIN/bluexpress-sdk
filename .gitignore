@@ -6,6 +6,9 @@ dist/
 coverage/
 *.tsbuildinfo
 
+# Local child workspace (reverse engineering / diff tooling)
+vendor/
+
 # Environment files
 .env
 .env.*

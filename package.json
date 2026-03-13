@@ -1,5 +1,5 @@
 {
-  "name": "@bluexpress/sdk",
+  "name": "@herrkin/bluexpress-sdk",
   "version": "0.1.0",
   "description": "Node.js/TypeScript SDK for BlueX APIs, based on the official BlueX WooCommerce plugin contracts.",
   "license": "MIT",
@@ -28,7 +28,10 @@
     "prepublishOnly": "npm run clean && npm run build && npm test",
     "test:unit": "npm run build && node --test test/unit/*.test.mjs",
     "test:contract": "npm run build && node --test test/contract/*.test.mjs",
-    "test:integration": "npm run build && node --test test/integration/*.test.mjs"
+    "test:integration": "npm run build && node --test test/integration/*.test.mjs",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "changeset publish"
   },
   "keywords": [
     "bluex",
@@ -38,10 +41,14 @@
     "woocommerce"
   ],
   "devDependencies": {
+    "@changesets/cli": "^2.30.0",
     "@types/node": "^22.13.10",
     "typescript": "^5.8.2"
   },
   "dependencies": {
     "zod": "^4.3.6"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -1,4 +1,4 @@
-# @bluexpress/sdk
+# @herrkin/bluexpress-sdk
 
 SDK **no oficial** de Node.js/TypeScript para integrar BlueX en cualquier sistema (no dependiente de WooCommerce), construido mediante ingeniería inversa del plugin oficial **BlueX for WooCommerce** `3.1.6`.
 
@@ -25,10 +25,15 @@ Este SDK cubre los endpoints observados en el cliente API del plugin oficial:
 - Node.js `>= 18`
 - API Key de BlueX (`x-api-key`)
 
+## Dependencias
+
+- Runtime: solo `zod` (validación de contrato).
+- Sin dependencias externas adicionales para HTTP/testing en runtime (usa `fetch` nativo de Node).
+
 ## Instalación
 
 ```bash
-npm install @bluexpress/sdk
+npm install @herrkin/bluexpress-sdk
 ```
 
 ## Variables de entorno sugeridas
@@ -58,6 +63,26 @@ const client = new BluexpressClient({
   accountName: process.env.BLUEXPRESS_ACCOUNT_NAME
 });
 ```
+
+## Versionamiento automático
+
+Se usa **Changesets + GitHub Actions**:
+
+- Cada PR debe incluir un changeset (`npm run changeset`).
+- Al merge en `main`, se crea/actualiza un PR de release con bump de versión y changelog.
+- Al merge del PR de release, el workflow publica automáticamente en npm.
+
+Scripts disponibles:
+
+```bash
+npm run changeset
+npm run version-packages
+npm run release
+```
+
+Secret requerido en GitHub:
+
+- `NPM_TOKEN` con permisos de publish para `@herrkin/bluexpress-sdk`.
 
 ## Qué hace cada función
 
