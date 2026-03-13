@@ -1,0 +1,49 @@
+{
+  "pricingRequest": {
+    "from": { "country": "CL", "district": "SCL" },
+    "to": { "country": "CL", "state": "13", "district": "PRO" },
+    "serviceType": "EX",
+    "bultos": [
+      { "largo": 10, "ancho": 10, "alto": 10, "sku": "TEST01", "pesoFisico": 1, "cantidad": 1 }
+    ],
+    "declaredValue": 10000,
+    "familiaProducto": "PAQU",
+    "domain": "https://shop.example.com/"
+  },
+  "pricingResponse": {
+    "code": "00",
+    "message": "OK",
+    "data": { "total": 1990, "promiseDay": 1, "nameService": "Express", "isShipmentFree": false }
+  },
+  "geolocationRequest": {
+    "address": "Providencia",
+    "regionCode": "13",
+    "agencyId": "",
+    "isPudo": false,
+    "type": "woocommerce",
+    "shop": "https://shop.example.com/"
+  },
+  "geolocationResponse": {
+    "porcentageDeExito": "95%",
+    "regionCode": "13",
+    "cidadeName": "PROVIDENCIA",
+    "cidadeCode": "PRO",
+    "districtCode": "PRO",
+    "pickupInfo": { "agency_name": "BlueX Pickup Example" }
+  },
+  "validateIntegrationStatusResponse": {
+    "activeIntegration": true,
+    "storeId": "store-123",
+    "message": "Integration active"
+  },
+  "updateIntegrationCredentialsRequest": {
+    "storeId": "store-123",
+    "ecommerce": "Woocommerce",
+    "credentials": { "clientKey": "key", "clientSecret": "secret" },
+    "accountName": "https://shop.example.com/"
+  },
+  "logWebhookRequest": {
+    "error": "pricing failure",
+    "order": { "id": 1234 }
+  }
+}
