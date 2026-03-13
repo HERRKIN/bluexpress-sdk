@@ -1,6 +1,6 @@
 {
   "name": "@herrkin/bluexpress-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Node.js/TypeScript SDK for BlueX APIs, based on the official BlueX WooCommerce plugin contracts.",
   "license": "MIT",
   "type": "module",
