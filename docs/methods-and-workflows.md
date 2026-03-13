@@ -103,7 +103,7 @@ await client.sendLogWebhook({
 import {
   BluexpressApiError,
   BluexpressValidationError
-} from "@bluexpress/sdk";
+} from "@herrkin/bluexpress-sdk";
 
 try {
   const data = await client.getPricing(...);

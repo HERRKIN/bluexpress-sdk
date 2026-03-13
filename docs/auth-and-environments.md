@@ -33,7 +33,7 @@ BLUEXPRESS_ACCOUNT_NAME=https://tu-tienda.com/
 ## Configuración mínima
 
 ```ts
-import { BluexpressClient } from "@bluexpress/sdk";
+import { BluexpressClient } from "@herrkin/bluexpress-sdk";
 
 const client = new BluexpressClient({
   environment: "qa",
